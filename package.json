@@ -5,8 +5,10 @@
   "main": "index.tsx",
   "scripts": {
     "clear": "rm -r -f ./build",
-    "start": "nodemon --watch *.js --exec \"webpack-dev-server\"",
+    "dev": "nodemon --watch *.js --exec \"webpack-dev-server\"",
     "build": "npm run clear && webpack -p",
+    "postinstall": "npm run build",
+    "start": "node server.js",
     "test": "jest --verbose ./__tests__/test-files"
   },
   "keywords": [],
@@ -21,6 +23,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "chai": "^4.1.2",
     "eslint-config-latest": "^1.0.4",
+    "express": "^4.16.2",
     "jest-cli": "^22.0.4",
     "nodemon": "^1.14.3",
     "webpack": "^3.8.1",
