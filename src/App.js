@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   onValueChange() {
-    console.log(this.randomize(data));
     this.setState({
       data: this.randomize(data)
     });
