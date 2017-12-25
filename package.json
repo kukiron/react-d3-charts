@@ -7,7 +7,7 @@
     "clear": "rm -r -f ./build",
     "dev": "nodemon --watch *.js --exec \"webpack-dev-server\"",
     "build": "npm run clear && webpack -p",
-    "postinstall": "npm install && npm run build",
+    "postinstall": "npm install && webpack -p",
     "start": "node server.js",
     "test": "jest --verbose ./__tests__/test-files"
   },
