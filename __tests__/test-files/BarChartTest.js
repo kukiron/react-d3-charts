@@ -1,9 +1,9 @@
 /*eslint no-undef: 0*/
-
 import { expect } from "chai";
 import React from "react";
 import ReactTestUtils from "react-dom/test-utils";
-import BarChart from "../../src/bar-chart/BarChart";
+
+import BarChart from "../../src/bar-chart";
 import { generatePartsOfWhole as generate } from "../utils/datagen";
 
 describe("BarChart", () => {

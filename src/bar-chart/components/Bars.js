@@ -21,7 +21,7 @@ class Bars extends Component {
 
     const bars = data.map((datum, i) => (
       <rect
-        key={datum.title}
+        key={i}
         className="bar-chart"
         x={xScale(datum.title)}
         y={yScale(datum.value)}

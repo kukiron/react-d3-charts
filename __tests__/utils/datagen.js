@@ -1,16 +1,16 @@
 exports.generatePartsOfWhole = function() {
   let data = [],
     names = [
-      "Henrietta",
-      "Meaghan",
-      "Miguelina",
-      "Hoyt",
-      "Felecia",
-      "Karisa",
-      "Gaynell",
-      "Meda",
-      "Natisha",
-      "Annika"
+      "Led Zeppelin",
+      "AC/DC",
+      "Def Lepard",
+      "Van Halen",
+      "The Eagles",
+      "Black Sabbath",
+      "The Scorpions",
+      "Starship",
+      "Chuck Berry",
+      "Nirvana"
     ],
     numbers = [],
     total = 0;

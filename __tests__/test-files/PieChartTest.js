@@ -1,9 +1,9 @@
 /*eslint no-undef: 0*/
-
 import { expect } from "chai";
 import React from "react";
 import ReactTestUtils from "react-dom/test-utils";
-import PieChart from "../../src/pie-chart/PieChart";
+
+import PieChart from "../../src/pie-chart";
 import { generatePartsOfWhole as generate } from "../utils/datagen";
 
 describe("PieChart", () => {

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-import BarChart from "./bar-chart/BarChart";
-import PieChart from "./pie-chart/PieChart";
+import BarChart from "./bar-chart";
+import PieChart from "./pie-chart";
 import data from "./data";
 
 class App extends Component {
@@ -29,8 +29,7 @@ class App extends Component {
     return (
       <div>
         <div className="header">
-          <h2>Welcome to the</h2>
-          <h1>BAD ASS CHART</h1>
+          <h1>React-D3-Charts</h1>
         </div>
         <Tabs>
           <TabList>

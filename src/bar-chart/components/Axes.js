@@ -1,4 +1,5 @@
 import React from "react";
+
 import Axis from "./Axis";
 
 export default ({ scales, margins, svgDimensions }) => {
