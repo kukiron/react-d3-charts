@@ -11,6 +11,9 @@
     "start": "node server.js",
     "test": "jest --verbose ./__tests__/test-files"
   },
+  "engines": {
+    "node": "9.2.1"
+  },
   "keywords": [],
   "author": "Kafil Uddin",
   "license": "ISC",
