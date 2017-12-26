@@ -23,8 +23,8 @@ const Pies = ({ data, radius }) => {
     .innerRadius(innerRadius);
 
   const labelArc = arc()
-    .outerRadius(outerRadius + 20)
-    .innerRadius(outerRadius + 20);
+    .outerRadius(outerRadius + 22)
+    .innerRadius(outerRadius + 22);
 
   const paths = newPie(data).map((d, i) => (
     <g key={i}>
