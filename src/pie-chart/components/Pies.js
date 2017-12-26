@@ -30,13 +30,9 @@ const Pies = ({ data, radius }) => {
     <g key={i}>
       <path className="pie-chart" fill={color(i)} d={newArc(d)} stroke="#fff" />
       <text
+        className="pie-label"
         transform={`translate(${labelArc.centroid(d)})`}
         dy=".35em"
-        style={{
-          font: "15px sans-serif",
-          textAnchor: "middle",
-          color: "#333"
-        }}
       >
         {d.data.title}
       </text>

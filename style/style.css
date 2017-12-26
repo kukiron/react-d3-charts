@@ -16,6 +16,12 @@ body {
   text-align: center;
 }
 
+.pie-label {
+  font-size: 14px;
+  text-anchor: middle;
+  color: #222;
+}
+
 .chart-container {
   padding: 15px;
   margin: 0 auto;
