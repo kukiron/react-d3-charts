@@ -8,8 +8,7 @@ class PieChart extends Component {
     const width = window.innerWidth,
       height = window.innerHeight,
       minViewportSize = Math.min(width, height),
-      ratio = 0.8,
-      radius = minViewportSize * ratio / 2,
+      radius = minViewportSize * 0.7 / 2,
       x = width / 2,
       y = height / 2;
 
