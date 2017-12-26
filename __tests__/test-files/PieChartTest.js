@@ -16,7 +16,7 @@ describe("PieChart", () => {
       <PieChart data={data} />
     );
 
-    // // Verify that it has rendered the main chart svg
+    // Verify that it has rendered the main chart svg
     const pie = ReactTestUtils.findRenderedDOMComponentWithClass(
       piechart,
       "vizzlo-pie"
