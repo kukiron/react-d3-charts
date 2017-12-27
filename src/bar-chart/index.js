@@ -13,22 +13,19 @@ class BarChart extends Component {
   }
 
   render() {
-    const margins = { top: 50, right: 20, bottom: 100, left: 60 };
-    const svgDimensions = {
-      width: Math.max(this.props.parentWidth, 300),
-      height: 500
-    };
-
-    const maxValue = Math.max(...this.props.data.map(d => d.value));
-
-    const xScale = this.xScale
-      .padding(0.5)
-      .domain(this.props.data.map(d => d.title))
-      .range([margins.left, svgDimensions.width - margins.right]);
-
-    const yScale = this.yScale
-      .domain([0, maxValue])
-      .range([svgDimensions.height - margins.bottom, margins.top]);
+    const margins = { top: 50, right: 20, bottom: 100, left: 60 },
+      svgDimensions = {
+        width: Math.max(this.props.parentWidth, 300),
+        height: 500
+      },
+      maxValue = Math.max(...this.props.data.map(d => d.value)),
+      xScale = this.xScale
+        .padding(0.5)
+        .domain(this.props.data.map(d => d.title))
+        .range([margins.left, svgDimensions.width - margins.right]),
+      yScale = this.yScale
+        .domain([0, maxValue])
+        .range([svgDimensions.height - margins.bottom, margins.top]);
 
     return (
       <svg

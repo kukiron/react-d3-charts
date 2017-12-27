@@ -12,12 +12,12 @@ class Axis extends Component {
   }
 
   renderAxis() {
-    const axisType = `axis${this.props.orient}`;
-    const axis = d3Axis[axisType]()
-      .scale(this.props.scale)
-      .tickSize(-this.props.tickSize)
-      .tickPadding([12])
-      .ticks([4]);
+    const axisType = `axis${this.props.orient}`,
+      axis = d3Axis[axisType]()
+        .scale(this.props.scale)
+        .tickSize(-this.props.tickSize)
+        .tickPadding([12])
+        .ticks([4]);
 
     d3Select(this.axisElement).call(axis);
   }
