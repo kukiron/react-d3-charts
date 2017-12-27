@@ -28,7 +28,7 @@ class Bars extends Component {
         width={xScale.bandwidth()}
         fill={this.colorScale(i)}
       >
-        <title>€{datum.value}</title>
+        <title>{`\u20AC${datum.value}`}</title>
       </rect>
     ));
 

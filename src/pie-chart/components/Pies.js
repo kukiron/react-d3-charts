@@ -32,7 +32,7 @@ const Pies = ({ data, radius }) => {
       >
         {d.data.title}
       </text>
-      <title>€{d.data.value}</title>
+      <title>{`\u20AC${d.data.value}`}</title>
     </g>
   ));
 
