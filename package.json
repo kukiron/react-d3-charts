@@ -12,7 +12,7 @@
     "start": "node server.js",
     "lint": "eslint -- . --ext .js, .jsx",
     "lint:fix": "eslint --fix . --ext .js, .jsx",
-    "test": "jest --verbose ./__tests__/test-files"
+    "test": "jest --verbose ./__tests__/test-charts"
   },
   "engines": {
     "node": "9.3.0",
