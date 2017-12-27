@@ -4,7 +4,6 @@ import { scaleOrdinal } from "d3-scale";
 class Bars extends Component {
   constructor(props) {
     super(props);
-
     this.colorScale = scaleOrdinal().range([
       "#E74C3C",
       "#3498DB",

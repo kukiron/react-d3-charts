@@ -4,7 +4,6 @@ export default ChartComponent =>
   class ResponsiveChart extends Component {
     constructor(props) {
       super(props);
-
       this.state = {
         containerWidth: null
       };
@@ -49,7 +48,6 @@ export default ChartComponent =>
           ref={el => {
             this.chartContainer = el;
           }}
-          className="Responsive-wrapper"
         >
           {shouldRenderChart && this.renderChart()}
         </div>
