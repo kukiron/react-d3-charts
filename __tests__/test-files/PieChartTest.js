@@ -4,10 +4,10 @@ import React from "react";
 import ReactTestUtils from "react-dom/test-utils";
 
 import PieChart from "../../src/pie-chart";
-import { generatePartsOfWhole as generate } from "../utils/datagen";
+import { generatePartsOfWhole as generateData } from "../utils/datagen";
 
 describe("PieChart", () => {
-  const data = generate(),
+  const data = generateData(),
     values = data.map(item => item.value);
 
   it("renders piechart", () => {

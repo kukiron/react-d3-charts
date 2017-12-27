@@ -5,50 +5,38 @@ exports.generatePartsOfWhole = function() {
       "AC/DC",
       "Def Lepard",
       "Van Halen",
-      "The Eagles",
+      "Eagles",
       "Black Sabbath",
-      "The Scorpions",
+      "Scorpions",
       "Starship",
       "Chuck Berry",
-      "Nirvana"
+      "Nirvana",
+      "Pearl Jam",
+      "Porcupine Tree",
+      "Rush",
+      "Opeth",
+      "Motorhead"
     ],
-    numbers = [],
-    total = 0;
+    values = [],
+    number = 0,
+    randomNum = Math.ceil(Math.random() * names.length);
 
-  while (total < 100) {
-    let j = Math.floor(Math.random() * 100),
-      j1 = j / 2.0;
-
-    if (j1 < 10.0) {
-      continue;
-    }
-    total += j1;
-    numbers.push(j1);
+  while (values.length < randomNum) {
+    number = Math.floor(Math.random() * 500);
+    values.push(number);
   }
 
-  numbers.pop();
-  numbers.pop();
+  let len = values.length,
+    namesArr = names.slice(0, len);
 
-  let sum = numbers.reduce(function(sum, num) {
-    return sum + num;
-  });
-
-  let remainder = 100 - sum;
-  numbers.push(remainder);
-
-  let newNumbers = numbers.sort(function(v) {
-    return v;
-  });
-
-  newNumbers.forEach(function(value, idx) {
-    let i = idx % 10,
-      name = names[i],
-      obj = {
-        title: name,
-        value: value
-      };
+  for (let i = 0; i < len; i++) {
+    let name = namesArr[i];
+    let obj = {
+      title: name,
+      value: values[i]
+    };
     data.push(obj);
-  });
+  }
 
   return data;
 };
