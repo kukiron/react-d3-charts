@@ -1,4 +1,6 @@
-# React-D3-Chart
+# React-D3-Charts
+
+[![Coverage Status](https://coveralls.io/repos/github/kukiron/react-d3-charts/badge.svg?branch=master)](https://coveralls.io/github/kukiron/react-d3-charts?branch=master) [![bitHound Dev Dependencies](https://www.bithound.io/github/kukiron/react-d3-charts/badges/devDependencies.svg)](https://www.bithound.io/github/kukiron/react-d3-charts/master/dependencies/npm)
 
 This is a simple implementation of React with D3 for creating common chart elements (bar & pie chart).
 

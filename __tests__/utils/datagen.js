@@ -1,6 +1,6 @@
 exports.generatePartsOfWhole = function() {
   let data = [],
-    names = [
+    namesArr = [
       "Led Zeppelin",
       "AC/DC",
       "Def Lepard",
@@ -19,18 +19,19 @@ exports.generatePartsOfWhole = function() {
     ],
     values = [],
     number = 0,
-    randomNum = Math.ceil(Math.random() * names.length);
+    randomNum = Math.ceil(Math.random() * namesArr.length);
 
+  // Generating sample data of random array length
   while (values.length < randomNum) {
     number = Math.floor(Math.random() * 500);
     values.push(number);
   }
 
   let len = values.length,
-    namesArr = names.slice(0, len);
+    names = namesArr.slice(0, len);
 
   for (let i = 0; i < len; i++) {
-    let name = namesArr[i];
+    let name = names[i];
     let obj = {
       title: name,
       value: values[i]
