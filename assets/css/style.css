@@ -23,7 +23,7 @@ body {
   padding: 15px;
   margin: 0 auto;
   margin-top: 30px;
-  max-width: 70vw;
+  max-width: 65vw;
   overflow: auto;
 }
 
@@ -112,7 +112,7 @@ body {
     margin: 0 auto;
     margin-top: 15px;
     padding: 10px;
-    max-width: 90vw;
+    max-width: 85vw;
     overflow: auto;
   }
 }
