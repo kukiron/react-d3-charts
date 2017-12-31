@@ -16,7 +16,7 @@ class BarChart extends Component {
     const margins = { top: 50, right: 20, bottom: 100, left: 60 },
       svgDimensions = {
         width: Math.max(this.props.parentWidth, 300),
-        height: 500
+        height: 550
       },
       maxValue = Math.max(...this.props.data.map(d => d.value)),
       xScale = this.xScale

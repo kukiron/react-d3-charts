@@ -8,6 +8,7 @@ body {
   padding: 0;
 }
 
+
 /* Page header styles */
 
 .header {
@@ -17,13 +18,14 @@ body {
   text-align: center;
 }
 
+
 /* Bar chart styles */
 
 .chart-container {
   padding: 15px;
   margin: 0 auto;
   margin-top: 30px;
-  max-width: 70vw;
+  max-width: 65vw;
   overflow: auto;
 }
 
@@ -41,6 +43,7 @@ body {
   text-anchor: middle;
 }
 
+
 /* Pie chart styles */
 
 .pie-label {
@@ -49,12 +52,14 @@ body {
   color: #222;
 }
 
+
 /* Chart hover styles */
 
 .bar-chart:hover,
 .pie-chart:hover {
   fill: #555;
 }
+
 
 /* Tab styles */
 
@@ -86,6 +91,7 @@ body {
   cursor: pointer;
 }
 
+
 /* Tab button styles */
 
 .tab-btn {
@@ -105,6 +111,7 @@ body {
   color: #fff;
 }
 
+
 /* Responsive styles */
 
 @media (max-width: 980px) {
@@ -112,7 +119,7 @@ body {
     margin: 0 auto;
     margin-top: 15px;
     padding: 10px;
-    max-width: 90vw;
+    max-width: 85vw;
     overflow: auto;
   }
 }
