@@ -37,8 +37,8 @@ describe("PieChart", () => {
   // Testing HOC that it renders it's child components
   it("renders it's childrens", () => {
     const pieChart = () => <PieChart data={data} />
-    const ConditionalComponent = ResponsiveWrapper(pieChart),
-      wrapper = mount(<ConditionalComponent />)
+    const WrapperComponent = ResponsiveWrapper(pieChart),
+      wrapper = mount(<WrapperComponent />)
 
     wrapper.setState({ containerWidth: 1200 })
     expect(wrapper.find(pieChart).length).to.equal(1)

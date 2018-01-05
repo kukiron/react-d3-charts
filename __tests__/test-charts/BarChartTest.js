@@ -37,8 +37,8 @@ describe("BarChart", () => {
   // Testing HOC that it renders it's child components
   it("renders it's childrens", () => {
     const barchart = () => <BarChart data={data} />
-    const ConditionalComponent = ResponsiveWrapper(barchart),
-      wrapper = mount(<ConditionalComponent />)
+    const WrapperComponent = ResponsiveWrapper(barchart),
+      wrapper = mount(<WrapperComponent />)
 
     wrapper.setState({ containerWidth: 900 })
     expect(wrapper.find(barchart).length).to.equal(1)
