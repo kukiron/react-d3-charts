@@ -4,4 +4,4 @@ export default [
   { title: "Rental Car", value: 49 },
   { title: "Dinner", value: 112 },
   { title: "Postcards", value: 3 }
-];
+]

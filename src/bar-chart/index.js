@@ -1,53 +1,48 @@
-import React, { Component } from "react";
-import { scaleBand, scaleLinear } from "d3-scale";
+import React from "react"
+import { scaleBand, scaleLinear } from "d3-scale"
 
-import Axes from "./components/Axes";
-import Bars from "./components/Bars";
-import ResponsiveWrapper from "../ResponsiveWrapper";
+import Axes from "./components/Axes"
+import Bars from "./components/Bars"
+import ResponsiveWrapper from "../ResponsiveWrapper"
 
-class BarChart extends Component {
-  constructor(props) {
-    super(props);
-    this.xScale = scaleBand();
-    this.yScale = scaleLinear();
+const BarChart = ({ data, parentWidth }) => {
+  const maxValue = Math.max(...data.map(d => d.value))
+  const margins = { top: 50, right: 20, bottom: 100, left: 60 }
+
+  const svgDimensions = {
+    width: Math.max(parentWidth, 300),
+    height: 550
   }
 
-  render() {
-    const margins = { top: 50, right: 20, bottom: 100, left: 60 },
-      svgDimensions = {
-        width: Math.max(this.props.parentWidth, 300),
-        height: 550
-      },
-      maxValue = Math.max(...this.props.data.map(d => d.value)),
-      xScale = this.xScale
-        .padding(0.5)
-        .domain(this.props.data.map(d => d.title))
-        .range([margins.left, svgDimensions.width - margins.right]),
-      yScale = this.yScale
-        .domain([0, maxValue])
-        .range([svgDimensions.height - margins.bottom, margins.top]);
+  const xScale = scaleBand()
+    .padding(0.5)
+    .domain(data.map(d => d.title))
+    .range([margins.left, svgDimensions.width - margins.right])
 
-    return (
-      <svg
-        className="vizzlo-bar"
-        width={svgDimensions.width}
-        height={svgDimensions.height}
-      >
-        <Axes
-          scales={{ xScale, yScale }}
-          margins={margins}
-          svgDimensions={svgDimensions}
-        />
-        <Bars
-          scales={{ xScale, yScale }}
-          margins={margins}
-          data={this.props.data}
-          maxValue={maxValue}
-          svgDimensions={svgDimensions}
-        />
-      </svg>
-    );
-  }
+  const yScale = scaleLinear()
+    .domain([0, maxValue])
+    .range([svgDimensions.height - margins.bottom, margins.top])
+
+  return (
+    <svg
+      className="vizzlo-bar"
+      width={svgDimensions.width}
+      height={svgDimensions.height}
+    >
+      <Axes
+        scales={{ xScale, yScale }}
+        margins={margins}
+        svgDimensions={svgDimensions}
+      />
+      <Bars
+        scales={{ xScale, yScale }}
+        margins={margins}
+        data={data}
+        maxValue={maxValue}
+        svgDimensions={svgDimensions}
+      />
+    </svg>
+  )
 }
 
-export default ResponsiveWrapper(BarChart);
+export default ResponsiveWrapper(BarChart)
