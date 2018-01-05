@@ -10,7 +10,7 @@
     "heroku-prebuild": "npm install --only=dev",
     "postinstall": "webpack -p",
     "start": "node server.js",
-    "lint": "eslint -- . --ext .js, .jsx",
+    "lint": "eslint . --ext .js, .jsx",
     "lint:fix": "eslint --fix . --ext .js, .jsx",
     "test": "jest ./__tests__/test-charts",
     "test:cov": "rm -rf ./coverage && npm run test && cat ./coverage/lcov.info | coveralls"
@@ -34,10 +34,13 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
-    "eslint-config-latest": "^1.0.4",
-    "express": "^4.16.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-config-latest": "^1.0.6",
+    "husky": "^0.14.3",
     "jest-cli": "^22.0.4",
     "nodemon": "^1.14.3",
+    "react-test-renderer": "^16.2.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
   },
@@ -46,6 +49,7 @@
     "d3-scale": "^1.0.7",
     "d3-selection": "^1.2.0",
     "d3-shape": "^1.2.0",
+    "express": "^4.16.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-tabs": "^2.1.1"

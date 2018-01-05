@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("path")
 
 module.exports = {
   entry: "./index.js",
@@ -29,4 +29,4 @@ module.exports = {
       warnings: true
     }
   }
-};
+}
