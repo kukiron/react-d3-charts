@@ -98,7 +98,7 @@ body {
   margin-left: 30px;
   display: inline-block;
   font-size: 15px;
-  background-color: #ccc;
+  background-color: #cbcbcb;
   color: #121212;
   padding: 6px 8px;
   border-radius: 3px;
@@ -107,7 +107,7 @@ body {
 }
 
 .tab-btn:hover {
-  background: #8a8a8a;
+  background: #555;
   color: #fff;
 }
 
