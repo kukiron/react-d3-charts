@@ -19,25 +19,25 @@ exports.generatePartsOfWhole = function() {
     ],
     values = [],
     number = 0,
-    randomNum = Math.ceil(Math.random() * namesArr.length);
+    randomNum = Math.ceil(Math.random() * namesArr.length)
 
   // Generating sample data of random array length
   while (values.length < randomNum) {
-    number = Math.floor(Math.random() * 500);
-    values.push(number);
+    number = Math.floor(Math.random() * 500)
+    values.push(number)
   }
 
   let len = values.length,
-    names = namesArr.slice(0, len);
+    names = namesArr.slice(0, len)
 
   for (let i = 0; i < len; i++) {
-    let name = names[i];
+    let name = names[i]
     let obj = {
       title: name,
       value: values[i]
-    };
-    data.push(obj);
+    }
+    data.push(obj)
   }
 
-  return data;
-};
+  return data
+}
