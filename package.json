@@ -8,14 +8,13 @@
     "start": "node server.js",
     "clear": "rm -rf ./build",
     "build": "npm run clear && webpack -p",
-    "lint": "eslint -- . --ext .js, .jsx",
+    "lint": "eslint . --ext .js, .jsx",
     "lint:fix": "eslint --fix . --ext .js, .jsx",
     "heroku-prebuild": "npm install --only=dev",
     "postinstall": "webpack -p",
     "prepush": "npm run test",
     "test": "jest ./__tests__/test-charts",
-    "test:cov":
-      "rm -rf ./coverage && npm run test && cat ./coverage/lcov.info | coveralls"
+    "test:cov": "rm -rf ./coverage && npm run test && cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
     "node": "9.3.0",
