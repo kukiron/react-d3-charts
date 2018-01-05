@@ -3,10 +3,15 @@ import renderer from "react-test-renderer"
 
 import BarChart from "../../src/bar-chart"
 import PieChart from "../../src/pie-chart"
-import { generatePartsOfWhole as generateData } from "../utils/datagen"
 
 describe("Snapshot of the Charts", () => {
-  const data = generateData()
+  const data = [
+    { title: "Plane Ticket", value: 268 },
+    { title: "Hotel", value: 199 },
+    { title: "Rental Car", value: 49 },
+    { title: "Dinner", value: 112 },
+    { title: "Postcards", value: 3 }
+  ]
 
   // Snapshot of BarChart
   it("bar chart renders correctly", () => {
