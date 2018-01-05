@@ -6,11 +6,11 @@ import PieChart from "../../src/pie-chart"
 
 describe("Snapshot of the Charts", () => {
   const data = [
-    { title: "Plane Ticket", value: 268 },
-    { title: "Hotel", value: 199 },
-    { title: "Rental Car", value: 49 },
-    { title: "Dinner", value: 112 },
-    { title: "Postcards", value: 3 }
+    { title: "Plane Ticket", value: 640 },
+    { title: "Hotel", value: 135 },
+    { title: "Rental Car", value: 40 },
+    { title: "Dinner", value: 55 },
+    { title: "Postcards", value: 4 }
   ]
 
   // Snapshot of BarChart
