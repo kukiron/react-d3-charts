@@ -44,3 +44,30 @@ describe("PieChart", () => {
     expect(wrapper.find(pieChart).length).to.equal(1)
   })
 })
+
+describe("ResponsiveWrapper", () => {
+  let piechart
+  const data = generateData()
+
+  beforeEach(() => {
+    piechart = () => <PieChart data={data} />
+  })
+
+  // Testing HOC that it renders it's child component
+  it("renders it's children", () => {
+    const WrapperComponent = ResponsiveWrapper(piechart),
+      wrapper = mount(<WrapperComponent />)
+
+    wrapper.setState({ containerWidth: 900 })
+    expect(wrapper.find(piechart).length).to.equal(1)
+  })
+
+  // HOC doesn't render when containerWidth is null
+  it("doesn't render it's children", () => {
+    const WrapperComponent = ResponsiveWrapper(piechart),
+      wrapper = mount(<WrapperComponent />)
+
+    wrapper.setState({ containerWidth: null })
+    expect(wrapper.find(piechart).length).to.equal(0)
+  })
+})

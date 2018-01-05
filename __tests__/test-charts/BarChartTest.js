@@ -33,14 +33,31 @@ describe("BarChart", () => {
     )
     expect(barGroup.length).to.equal(values.length)
   })
+})
 
-  // Testing HOC that it renders it's child components
-  it("renders it's childrens", () => {
-    const barchart = () => <BarChart data={data} />
+describe("ResponsiveWrapper", () => {
+  let barchart
+  const data = generateData()
+
+  beforeEach(() => {
+    barchart = () => <BarChart data={data} />
+  })
+
+  // Testing HOC that it renders it's child component
+  it("renders it's children", () => {
     const WrapperComponent = ResponsiveWrapper(barchart),
       wrapper = mount(<WrapperComponent />)
 
     wrapper.setState({ containerWidth: 900 })
     expect(wrapper.find(barchart).length).to.equal(1)
+  })
+
+  // HOC doesn't render when containerWidth is null
+  it("doesn't render it's children", () => {
+    const WrapperComponent = ResponsiveWrapper(barchart),
+      wrapper = mount(<WrapperComponent />)
+
+    wrapper.setState({ containerWidth: null })
+    expect(wrapper.find(barchart).length).to.equal(0)
   })
 })
