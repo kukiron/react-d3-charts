@@ -13,36 +13,26 @@ describe("Snapshot of the Charts", () => {
     { title: "Postcards", value: 4 }
   ]
 
-  // Snapshot of BarChart
-  it("bar chart renders correctly", () => {
-    function createNodeMock(element) {
-      if (element.type === "div") {
-        return {
-          getBoundingClientRect() {
-            return { width: 600 }
-          }
+  const createNodeMock = element => {
+    if (element.type === "div") {
+      return {
+        getBoundingClientRect() {
+          return { width: 900 }
         }
       }
-      return null
     }
-    const options = { createNodeMock }
+    return null
+  }
+  const options = { createNodeMock }
+
+  // Snapshot of BarChart
+  it("bar chart renders correctly", () => {
     const tree = renderer.create(<BarChart data={data} />, options).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   // Snapshot of PieChart
   it("pie chart renders correctly", () => {
-    function createNodeMock(element) {
-      if (element.type === "div") {
-        return {
-          getBoundingClientRect() {
-            return { width: 900 }
-          }
-        }
-      }
-      return null
-    }
-    const options = { createNodeMock }
     const tree = renderer.create(<PieChart data={data} />, options).toJSON()
     expect(tree).toMatchSnapshot()
   })
