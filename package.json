@@ -14,7 +14,8 @@
     "postinstall": "webpack -p",
     "prepush": "npm run test",
     "test": "jest ./__tests__/test-charts",
-    "test:cov": "rm -rf ./coverage && npm run test && cat ./coverage/lcov.info | coveralls"
+    "test:cov":
+      "rm -rf ./coverage && npm run test && cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
     "node": "9.3.0",
@@ -23,6 +24,9 @@
   "jest": {
     "verbose": true,
     "collectCoverage": true
+  },
+  "greenkeeper": {
+    "ignore": ["package-names", "you-want-me-to-ignore"]
   },
   "keywords": [],
   "author": "Kafil Uddin",

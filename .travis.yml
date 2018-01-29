@@ -1,3 +1,7 @@
+env:
+  global:
+    secure: WDfBLudDZKMCHlJC2wNe3jdbz/3IlKf3c54HvwW/17IYHw2lN3Pjm6/Dc58ZZWib78z3/l26Z3LjZYMEz0pvudc1TelG53tgavyU2k6NNvsBX8dt7QiPdkVbDFSKYe/Gv+nIF+Q9PzIGy9CvcmG2dVbSDyBnX2OMOJdf54EJJ2FUByeeEXplgfjEP+21XHL68N+ZnVk33bPdUunS84HCuM85eDv7o1Hw3oYX54cU7NMYHID7M5FSQRnNVfYKsQ4Hl6avnOoUZco8I3WqZkAV+Rex3dcoNBfVEC4I1eF027HfLCroEC6yq5IJUBH+7Oh8hfwhBI2d0oKmzsASvimyfdfOFRgiZwVoZRktlYPbeTjyMdZoyBSYjUdFdNJnHmL81dHVz1wRk8qIyVvKujiShlcCekySOWc1vbAxxwn8bn/HuLoJOwPR7pSX9at/LkyqohkCb9206BkmyaXAQqz7KEhZZVNB8ekIH5WnMU3jl5pY0MVJvG7QIf14mW89onvJL0wutrbugnZpchcyjR2kjg09grXgoHINHzNMwyBiAV+fM3tTDy0vRhCQgHbE5g0MRG6PYwksmx2tmd9SNtmTvB9JxxWV4I+0rHAJZI5tfc4CVUm44toPtvkvdMPZ5uWVpb+F7DKDsOxAv9vn5BdDra3Qhsakq7n/+DdOq/Lvpcw=
+
 sudo: false
 
 language: node_js
@@ -11,14 +15,16 @@ node_js:
 
 cache:
   directories:
-    - node_modules
+  - node_modules
 
 before_install:
-  - npm install -g npm@latest
-
+  - '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest' # skipped when using node 9
+  - npm install -g greenkeeper-lockfile@1
 install:
   - npm install
 
+before_script: greenkeeper-lockfile-update
 script: npm run test
-
-after_script: cat ./coverage/lcov.info | coveralls
+after_script:
+  - greenkeeper-lockfile-upload
+  - cat ./coverage/lcov.info | coveralls
