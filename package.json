@@ -47,7 +47,7 @@
     "nodemon": "^1.14.3",
     "react-test-renderer": "^16.2.0",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^3.0.0"
   },
   "dependencies": {
     "d3-axis": "^1.0.8",
