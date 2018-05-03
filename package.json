@@ -18,7 +18,7 @@
       "rm -rf ./coverage && npm run test && cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
-    "node": "9.3.0",
+    "node": "10",
     "npm": "5.6.0"
   },
   "jest": {
