@@ -7,7 +7,7 @@ const PieChart = ({ data }) => {
   const width = window.innerWidth,
     height = window.innerHeight,
     minViewportSize = Math.min(width, height),
-    radius = minViewportSize * 0.7 / 2,
+    radius = (minViewportSize * 0.7) / 2,
     x = width / 2,
     y = height / 2
 
